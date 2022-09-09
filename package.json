@@ -10,10 +10,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.2",
     "axios": "^0.27.2",
     "element-ui": "^2.15.9",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuestic-ui": "^1.4.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

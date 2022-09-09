@@ -23,6 +23,7 @@
 
 <script>
     export default {
+      name:"dupNameJudge",
       data() {
         return {
           limitNum: 1,  // 上传excell时，同时允许上传的最大数
@@ -70,12 +71,14 @@
             this.$message.warning('请上传文件');
           } else {
             let form = new FormData();
-            form.append('file', this.fileList);
+            console.log(this.fileList)
+            form.append('file', this.fileList[0]);
+            // console.log(this.fileList[-1])
             this.$axios({
               method:"post",
-              url: "http://127.0.0.1:8081/upload",
+              url: "http://127.0.0.1:8082/upload",
               headers:{
-                'Content-type': 'multipart/form-data'
+                'Content-Type': 'multipart/form-data',
               },
               data:form
             }).then(
@@ -84,6 +87,8 @@
               },err =>{
               });
           }
+          //fileList清空
+          this.fileList = []
         }
   
       }

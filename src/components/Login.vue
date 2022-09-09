@@ -79,7 +79,7 @@ export default {
 <style scoped>
 .login {
     width: 100%;
-    height: 1000px auto;
+    height: 100% ;
     background: url("../assets/background.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;

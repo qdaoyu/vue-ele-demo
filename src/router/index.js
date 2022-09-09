@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import homePage from '@/components/HomePage'
 import login from '@/components/Login'
 import my from '@/components/My'
 import dupNameJudge from '@/components/DupNameJudge'
@@ -23,6 +23,11 @@ export default new Router({
       path: '/dupNameJudge',
       name: 'dupNameJudge',
       component: dupNameJudge
+    },
+    {
+      path: '/homePage',
+      name: 'homePage',
+      component: homePage
     },
   ],
   // mode:history
